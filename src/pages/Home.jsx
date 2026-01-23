@@ -285,8 +285,8 @@ function Home() {
                       <div className="mb-3 relative">
                         <div className="absolute inset-0 bg-astronova-cyan/20 blur-xl rounded-full"></div>
                         <img 
-                          src="/astronova-logo.jpeg" 
-                          alt="AstraNova" 
+                          src="/astronova-website/astronova-logo.jpeg" 
+                          alt="AstroNova" 
                           className="relative h-16 w-16 sm:h-20 sm:w-20 object-cover rounded-2xl mx-auto shadow-2xl ring-2 ring-astronova-cyan/30"
                         />
                       </div>
