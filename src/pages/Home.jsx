@@ -138,7 +138,7 @@ function Home() {
         <div 
           className="hidden sm:block absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: "url('/space-bg-desktop.jpg')", // ← Your desktop/landscape image
+            backgroundImage: "url('./space-bg-desktop.jpg')", // Updated path
             backgroundPosition: 'center center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
@@ -149,7 +149,7 @@ function Home() {
         <div 
           className="sm:hidden absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: "url('/space-bg-mobile.jpg')", // ← Your iPhone XR dimension image
+            backgroundImage: "url('./space-bg-mobile.jpg')", // Updated path
             backgroundPosition: 'top center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
