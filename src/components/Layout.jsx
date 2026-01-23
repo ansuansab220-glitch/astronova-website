@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaTimes, FaMoon, FaSun } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 import { useTheme } from '../contexts/ThemeContext';
-
+import logo from '/astronova-logo.jpeg';
 function Layout({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { isDarkMode, toggleTheme } = useTheme();
+  const { isDarkMode } = useTheme();
   const location = useLocation();
 
   return (
@@ -19,7 +19,7 @@ function Layout({ children }) {
           {/* Small Icon-Sized Logo */}
           <div className="relative flex-shrink-0">
             <img 
-              src="/astronova-logo.jpeg" 
+              src="./astronova-logo.jpeg" 
               alt="AstraNova" 
               className="h-12 w-12 object-cover rounded-lg animate-pulse-glow hover:drop-shadow-[0_0_40px_rgba(0,212,255,1)] transition-all duration-300 ring-2 ring-astronova-cyan/30 ring-offset-2 ring-offset-transparent"
             />
@@ -49,23 +49,6 @@ function Layout({ children }) {
         </button>
       </div>
 
-      {/* Dark Mode Toggle - Top Right - Hide on Home Page */}
-      {location.pathname !== '/' && (
-        <div className="fixed top-6 right-6 z-50">
-          <button
-            onClick={toggleTheme}
-            className="p-3 rounded-full border-2 border-gray-300 dark:border-astronova-cyan bg-white/10 dark:bg-astronova-dark-blue/50 backdrop-blur-md hover:bg-white/20 dark:hover:bg-astronova-cyan/10 transition-all duration-300 hover:scale-110 hover:rotate-12"
-            aria-label="Toggle theme"
-          >
-            {isDarkMode ? (
-              <FaSun className="text-astronova-gold text-xl" />
-            ) : (
-              <FaMoon className="text-gray-700 dark:text-white text-xl" />
-            )}
-          </button>
-        </div>
-      )}
-
       {/* Hidden Menu - Appears on Logo Click */}
       {menuOpen && (
         <>
@@ -92,7 +75,7 @@ function Layout({ children }) {
               <div className="relative">
                 <div className="absolute inset-0 bg-astronova-cyan/20 blur-2xl rounded-full animate-pulse"></div>
                 <img 
-                  src="/astronova-logo.jpeg" 
+                  src="./astronova-logo.jpeg" 
                   alt="AstraNova Group" 
                   className="relative h-24 w-24 object-cover rounded-2xl shadow-2xl animate-pulse-glow ring-4 ring-astronova-cyan/40"
                 />

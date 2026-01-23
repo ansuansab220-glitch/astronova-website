@@ -138,7 +138,7 @@ function Home() {
         <div 
           className="hidden sm:block absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: "url('./space-bg-desktop.jpg')", // Updated path
+            backgroundImage: "url('./space-bg-desktop.png')", // Updated path
             backgroundPosition: 'center center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
