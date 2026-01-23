@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
+import logo from '/astronova-logo.jpeg';
 // Ultra-Professional 3D Company Card Component (Desktop)
 function CompanyCard3D({ name, subtitle, icon, delay }) {
   return (
