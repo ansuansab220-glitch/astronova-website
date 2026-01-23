@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AstraNova Group</title>
+  <script>
+    // Redirect all routes to index.html with hash
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <script>
+    sessionStorage.redirect = location.href;
+    location.replace(location.pathname.slice(0, location.pathname.lastIndexOf('/')) + '/index.html#' + location.pathname.slice(location.pathname.lastIndexOf('/')));
+  </script>
+</body>
+</html>
